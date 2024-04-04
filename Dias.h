@@ -10,20 +10,24 @@ public:
         }
     }
 
-    bool isleapYear() const {
-        if (a % 4 == 0 && a % 100 != 0) {
-            return true;
-        } else {
-            return false;
-        }
+bool isleapYear() const {
+    if((a % 4 == 0 && a % 100 != 0 ) || a % 400 == 0) {
+        
+        std::cout << "Es bisiesto" << std::endl;
+        return true;
+      
+    } else {
+        
+        std::cout << "No es bisiesto" << std::endl;
+        return false;
     }
+}
 
     void setMes(int mes) {
         if (mes >= 12 || mes < 1) {
             m = mes;
         }
     }
-
     void setDia(int dia) {
         d = dia;
     }

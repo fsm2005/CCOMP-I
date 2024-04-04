@@ -7,14 +7,14 @@ int main() {
 
     std::cout << "Fecha 1: ";
     fecha1.displayDate();
-    fecha1.isleapYear();
+fecha1.isleapYear();
 
     std::cout << "Fecha 2: ";
     fecha2.displayDate();
-    fecha1.isleapYear();
+ fecha2.isleapYear();
 
     std::cout << "Fecha 3: ";
     fecha3.displayDate();
-    fecha1.isleapYear();
+   fecha3.isleapYear();
 
 }
