@@ -24,10 +24,21 @@ bool isleapYear() const {
 }
 
     void setMes(int mes) {
-        if (mes >= 12 || mes < 1) {
+        if (mes >= 12 || mes < 1){
             m = mes;
         }
+    
+      }
+bool validar() const {
+    if (m == 6 || m == 4 || m == 9 || m == 11) {
+        if (d > 30) {
+          std::cout << "es exacto" << std::endl;
+            return true;
+        }
     }
+  std::cout << "no es exacto" << std::endl;
+    return false;
+}
     void setDia(int dia) {
         d = dia;
     }
