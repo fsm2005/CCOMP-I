@@ -1,22 +1,61 @@
 #include <iostream>
-#include "Dias.h"
+ #include"persona.h"
+using namespace std;
+#include <algorithm>
+
+bool compareByAge(const persona& a, const persona& b) {
+	return a.getEdad() < b.getEdad();
+}
+
+bool compareByName(const persona& a, const persona& b) {
+	return a.getNombre() < b.getNombre();
+}
+
 int main() {
-    Dias fecha1(3, 1, 2020);
-    Dias fecha2(15, 14, 2019);
-    Dias fecha3(20, 12, 1500);
+	persona* p1 = new persona[10]{ {"jose", 12},{"maria",14} ,{"pablo", 12},{"carlos", 11},{"pedro", 13},{"ramon", 16},{"kasndra", 17},{"cristofer", 14},{"mariajose", 15 }, { "josemaria", 18 }
+};
+	persona* ptr = p1 + 9;
+	for (;ptr >= p1;ptr--) {
+		std::cout << ptr->getNombre() << " " << ptr->getEdad()<< endl;
+	}
 
-    std::cout << "Fecha 1: ";
-    fecha1.displayDate();
-    fecha1.isleapYear();
-    fecha1.validar();
+	//persona* ptr = r + 9;
+	//for (persona* ptr;ptr >= r;ptr--) {
+		//std::cout << nombre << " " << edad ;
+	//}
 
-    std::cout << "Fecha 2: ";
-    fecha2.displayDate();
-    fecha2.isleapYear();
-    fecha2.validar();
+	cout << "INDICE IMPAR: " << endl;
 
-    std::cout << "Fecha 3: ";
-    fecha3.displayDate();
-    fecha3.isleapYear();
-    fecha3.validar();
+	for (int i = 0; i <= 10; i++) {
+
+		if (i % 2!=0) {
+			cout <<(p1 + i)->getNombre() << " " << (p1 + i)->getEdad()<< endl;
+		}
+	}
+//		persona* ptr = r + 9;
+//		int cont = 0;
+//		for (persona* ptr;ptr >= r;ptr--) {
+//			if (r[cont] % 2) {
+//				std::cout << nombre << " " << edad << ;
+//			}
+//		}
+	cout << "Funcion  print : " << endl;
+	persona temp("", 0);
+
+	temp.print(p1, 10);
+
+	std::sort(p1, p1 + 10, compareByAge);
+	cout << "ORDEN EDAD: " << endl;
+	for (int i = 0; i < 10; ++i) {
+		cout << p1[i].getNombre() << " " << p1[i].getEdad() << endl;
+	}
+
+
+	std::sort(p1, p1 + 10, compareByName);
+	cout << "ORDEN NOMBRE : " << endl;
+	for (int i = 0; i < 10; ++i) {
+		cout << p1[i].getNombre() << " " << p1[i].getEdad() << endl;
+	}
+
+	delete[]p1;
 }
