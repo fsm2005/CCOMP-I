@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<Context displayName="SMARTHOTEL-FACTELECJavaEnvironment"
-         override="true"
-         path="/SMARTHOTEL-FACTELECJavaEnvironment"
-         docBase="${catalina.base}/webapps/SMARTHOTEL-FACTELECJavaEnvironment">
-</Context>
