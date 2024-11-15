@@ -1,13 +1,3 @@
-query {
-  usuario(id: "1") {
-    nombre
-    email
-    posts {
-      titulo
-      contenido
-    }
-  }
-}
 
 {
   "data": {
