@@ -8,3 +8,22 @@ query {
     }
   }
 }
+
+{
+  "data": {
+    "usuario": {
+      "nombre": "Juan Pérez",
+      "email": "juan.perez@example.com",
+      "posts": [
+        {
+          "titulo": "Mi primer post",
+          "contenido": "Este es el contenido de mi primer post"
+        },
+        {
+          "titulo": "Otro post",
+          "contenido": "Contenido del segundo post"
+        }
+      ]
+    }
+  }
+}
