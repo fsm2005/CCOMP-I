@@ -1,0 +1,15 @@
+
+{
+  "data": {
+    "usuario": {
+      "nombre": "alex",
+      "email": "alex.23123@example.com",
+      "posts": [
+        {
+          "titulo": "hola",
+          "contenido": "primer dia "
+        },
+      ]
+    }
+  }
+}
