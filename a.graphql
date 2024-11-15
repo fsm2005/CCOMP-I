@@ -1,0 +1,18 @@
+
+type Usuario {
+  id: ID!
+  nombre: String!
+  email: String!
+  posts: [Post]
+}
+type Post {
+  id: ID!
+  titulo: String!
+  contenido: String!
+  autor: Usuario
+}
+type Query {
+  usuario(id: ID!): Usuario
+  posts: [Post]
+  post(id: ID!): Post
+}
